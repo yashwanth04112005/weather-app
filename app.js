@@ -6,7 +6,7 @@ const  weathericon = document.querySelector(".weather-icon");
  
  
  async function checkWeather(city){
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=5de4d36ace8945918bf103318252905&q=${city}&aqi=yes`);
+    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=5de4d36ace8945918bf103318252905&q=${city}&aqi=yes`);
     var data = await response.json();
     console.log(data);
     document.querySelector(".city").innerText=`${data.location.name} , ${data.location.region}, ${data.location.country}`;
